@@ -153,9 +153,9 @@ for epoch in range(5):
 
 # %%
 model_state_dict = model.state_dict()
-torch.save(model_state_dict, 'cn_classify.pt')
+torch.save(model_state_dict, 'cn_fill_task.pt')
 # %%
-model_state_dict = torch.load('cn_classify.pt')
+model_state_dict = torch.load('cn_fill_task.pt')
 model.load_state_dict(model_state_dict)
 # %%
 #测试
