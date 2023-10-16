@@ -141,7 +141,13 @@ for i, (input_ids, attention_mask, token_type_ids,
 
     if i == 300:
         break
+# %%
+model_state_dict = model.state_dict()
+torch.save(model_state_dict, 'model.pt')
 
+# %%
+model_state_dict = torch.load('model.pt')
+model.load_state_dict(model_state_dict)
 
 # %%
 #测试
